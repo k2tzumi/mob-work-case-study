@@ -31,11 +31,7 @@
       "sentence-length": {
         "max": 120
       },
-      "ja-no-mixed-period": {
-        "allowPeriodMarks": [
-          ":"
-        ]
-      }
+      "ja-no-mixed-period": false
     },
     "ja-technical-writing/sentence-length": false
   }
