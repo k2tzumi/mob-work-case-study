@@ -11,6 +11,13 @@ jobs:
       cancel-in-progress: true
 
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - name: textlint-github-pr-review
+        uses: tsuyoshicho/action-textlint@v3
+        with:
+          reporter: github-pr-review
+          level: warning
+          textlint_flags: "slides.md"
+          filter_mode: "diff_context"
       - run: make build
