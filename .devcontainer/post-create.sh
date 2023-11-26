@@ -2,6 +2,8 @@
 
 echo 'source /usr/share/bash-completion/completions/git' >> ~/.bashrc
 
-npm install -g npm@latest
+apt update
 
-make install
+apt install -y build-essential
+
+npm install -g npm@latest

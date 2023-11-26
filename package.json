@@ -6,10 +6,10 @@
   },
   "scripts": {
     "build": "slidev build",
-    "dev": "slidev --open",
+    "dev": "slidev",
     "export": "slidev export --with-clicks --with-toc",
     "export-notes": "slidev export-notes",
-    "textlint": "textlint slides.md"
+    "lint": "textlint slides.md"
   },
   "dependencies": {
     "@katzumi/slidev-addon-blog-card": "^0.0.2",
