@@ -41,6 +41,13 @@ upgrade:
 	npx -p npm-check-updates  -c "ncu -u"
 	npm update
 
+.textlintcache: slides.md
+	npx textlint --cache slides.md
+
+.PHONY: lint
+lint: ## Run textlint
+lint: .textlintcache
+
 .PHONY: publish
 publish: ## Publish slide
 publish: slides-export.pdf slides-export-notes.pdf
@@ -50,4 +57,4 @@ publish: slides-export.pdf slides-export-notes.pdf
 .PHONY: clean
 clean: ## Delete slide
 clean:
-	rm -rf docs dist slides-export slides-export.pdf export-notes
+	rm -rf docs dist slides-export slides-export.pdf slides-export-notes.pdf export-notes
