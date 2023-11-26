@@ -41,6 +41,13 @@ upgrade:
 	npx -p npm-check-updates  -c "ncu -u"
 	npm update
 
+.textlintcache: slides.md
+	npx textlint --cache slides.md
+
+.PHONY: lint
+lint: ## Run textlint
+lint: .textlintcache
+
 .PHONY: publish
 publish: ## Publish slide
 publish: slides-export.pdf slides-export-notes.pdf
